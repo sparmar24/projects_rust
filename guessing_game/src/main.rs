@@ -17,8 +17,10 @@ fn main() {  //main function
             .read_line(&mut guess)
             .expect("Failed to read line");
 
-        let guess: u32 = guess.trim().parse().expect("Please type a number!");
-
+        let guess: u32 = match guess.trim().parse() {  //convert string to u32
+            Ok(num) => num, //ok if guessed a number
+            Err(_) => continue, //ignore if non-number
+        };
         println!("You guessed: {guess}"); //print statement
 
         match guess.cmp(&secret_number) { //comparison of guess and secret number
