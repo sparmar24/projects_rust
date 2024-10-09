@@ -8,20 +8,23 @@ fn main() {  //main function
     //1-100
 
     println!("The secret number is: {secret_number}");  //print statement
-    println!("Please input your guess."); //print statement
+    
+    loop {
+        println!("Please input your guess."); //print statement
+        
+        let mut guess = String::new();  //define mutable variable
+        io::stdin()  //
+            .read_line(&mut guess)
+            .expect("Failed to read line");
 
-    let mut guess = String::new();  //define mutable variable
-    io::stdin()  //
-        .read_line(&mut guess)
-        .expect("Failed to read line");
+        let guess: u32 = guess.trim().parse().expect("Please type a number!");
 
-    let guess: u32 = guess.trim().parse().expect("Please type a number!");
+        println!("You guessed: {guess}"); //print statement
 
-    println!("You guessed: {guess}"); //print statement
-
-    match guess.cmp(&secret_number) { //comparison of guess and secret number
-        Ordering::Less => print!("Too small!"),
-        Ordering::Greater => print!("Too big!"),
-        Ordering::Equal => print!("You win!"),
+        match guess.cmp(&secret_number) { //comparison of guess and secret number
+            Ordering::Less => print!("Too small!"),
+            Ordering::Greater => print!("Too big!"),
+            Ordering::Equal => print!("You win!"),
+        }
     }
 } 
