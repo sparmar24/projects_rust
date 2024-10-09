@@ -4,10 +4,11 @@ use std::io; //input/output library
 
 fn main() {  //main function
     println!("Guess the number!");   //print the statement
+    
     let secret_number = rand::thread_rng().gen_range(1..=100); //generate a random number between
     //1-100
 
-    println!("The secret number is: {secret_number}");  //print statement
+    // println!("The secret number is: {secret_number}");  //print statement
     
     loop {
         println!("Please input your guess."); //print statement
