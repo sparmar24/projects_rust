@@ -1,6 +1,24 @@
 use std::io;
 
 fn main() {
+    
+    // let t: (u32, u32, u32, u32, u32) = (11, 12, 13, 14, 15);
+    // let t = (11, 12, 13, 14, 15);
+    // println!("Please enter index for a tuple.");
+    // let mut tindex = String::new();
+
+    // io::stdin()
+    //     .read_line(&mut tindex)
+    //     .expect("Failed to read line");
+
+    // let tindex: usize = tindex
+    //     .trim()
+    //     .parse()
+    //     .expect("Entered index was not a number");
+
+    // let telement: usize = t.0;
+
+    // println!("The value of the element at index {tindex} is: {telement}");
 
     let a = [1, 2, 3, 4, 5];
     println!("Please enter index of an array");
@@ -38,9 +56,8 @@ fn main() {
     // println!("the value of z is: {z}");    
     // let _five_hundred = tup.0; //get first element of tuple
     // println!("the value of x is: {x}");    
-    // let _six_point_four = tup.1;
+    // let _six_point_four = tup.1;pyqt
     // let _one = tup.2;
-
 
 
 }
