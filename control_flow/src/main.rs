@@ -20,14 +20,36 @@
 // }
 
 //if, loop, break 
-fn main() {
-    let mut counter = 0;
+// fn main() {
+//     let mut counter = 0;
 
-    let result = loop {
-        counter += 1;
-        if counter == 10 {
-            break counter;
+//     let result = loop {
+//         counter += 1;
+//         if counter == 10 {
+//             break counter;
+//         }
+//      };
+//     println!("Result is {result}");
+// }
+
+// multiple loops and break statement
+fn main() {
+    let mut count = 0; //initialize the count variable
+    'counting_up: loop { //labelling the loop
+        println!("count = {count}");
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 5 { //loop will run from 10 to 5 in decreasing order
+                break; //exits inner loop
+            }
+            if count == 6 { //and also counts upto 6
+                break 'counting_up; //exits the outer loop
+            }
+            remaining -=1;
         }
-     };
-    println!("Result is {result}");
+        count += 1;
+    }
+    println!("End count = {count}");
 }
