@@ -33,23 +33,33 @@
 // }
 
 // multiple loops and break statement
-fn main() {
-    let mut count = 0; //initialize the count variable
-    'counting_up: loop { //labelling the loop
-        println!("count = {count}");
-        let mut remaining = 10;
+// fn main() {
+//     let mut count = 0; //initialize the count variable
+//     'counting_up: loop { //labelling the loop
+//         println!("count = {count}");
+//         let mut remaining = 10;
 
-        loop {
-            println!("remaining = {remaining}");
-            if remaining == 5 { //loop will run from 10 to 5 in decreasing order
-                break; //exits inner loop
-            }
-            if count == 6 { //and also counts upto 6
-                break 'counting_up; //exits the outer loop
-            }
-            remaining -=1;
-        }
-        count += 1;
+//         loop {
+//             println!("remaining = {remaining}");
+//             if remaining == 5 { //loop will run from 10 to 5 in decreasing order
+//                 break; //exits inner loop
+//             }
+//             if count == 6 { //and also counts upto 6
+//                 break 'counting_up; //exits the outer loop
+//             }
+//             remaining -=1;
+//         }
+//         count += 1;
+//     }
+//     println!("End count = {count}");
+// }
+//
+//while loop
+fn main() {
+    let mut count = 50; //set the count value to fix number
+    while count != 10 { //start while loop
+        println!("count is {count}");
+        count -= 10; //subtract 10 every time
     }
-    println!("End count = {count}");
+    println!("while loop ends !!!")
 }
