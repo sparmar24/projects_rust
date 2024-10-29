@@ -54,12 +54,22 @@
 //     println!("End count = {count}");
 // }
 //
-//while loop
+// //while loop
+// fn main() {
+//     let mut count = 50; //set the count value to fix number
+//     while count != 10 { //start while loop
+//         println!("count is {count}");
+//         count -= 10; //subtract 10 every time
+//     }
+//     println!("while loop ends !!!")
+// }
+
+//while loop on elements of an array
 fn main() {
-    let mut count = 50; //set the count value to fix number
-    while count != 10 { //start while loop
-        println!("count is {count}");
-        count -= 10; //subtract 10 every time
+    let a = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+    let mut index = 0;
+    while index < 9 {
+        println!("the value: {}", a[index]);
+        index += 1;
     }
-    println!("while loop ends !!!")
 }
