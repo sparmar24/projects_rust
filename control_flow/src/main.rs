@@ -66,10 +66,20 @@
 
 //while loop on elements of an array
 fn main() {
+    for_loop();
+
     let a = [10, 20, 30, 40, 50, 60, 70, 80, 90];
     let mut index = 0;
     while index < 9 {
         println!("the value: {}", a[index]);
         index += 1;
+    }
+}
+
+fn for_loop() {
+
+    let b = [1,2,3,4,5];
+    for i in b {
+        println!("the value is: {i}");
     }
 }
